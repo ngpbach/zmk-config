@@ -16,6 +16,11 @@
             bindings = <&kp DEL>;
             key-positions = <11 36>;
         };
+
+        Navigation {
+            bindings = <&mo 3>;
+            key-positions = <38 39>;
+        };
     };
 
     keymap {
@@ -29,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC       &kp Q  &kp W  &kp E           &kp R      &kp T          &kp Y        &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&mt LALT TAB  &kp A  &kp S  &kp D           &kp F      &kp G          &kp H        &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHIFT    &kp Z  &kp X  &kp C           &kp V      &kp B          &kp N        &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-                            &mt LCTRL LGUI  &kp SPACE  &lt 1 SPACE    &lt 2 SPACE  &kp SPACE  &kp ENTER
+&kp ESC       &kp Q  &kp W  &kp E           &kp R        &kp T          &kp Y        &kp U        &kp I      &kp O    &kp P     &kp BSPC
+&mt LALT TAB  &kp A  &kp S  &kp D           &kp F        &kp G          &kp H        &kp J        &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT    &kp Z  &kp X  &kp C           &kp V        &kp B          &kp N        &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
+                            &mt LCTRL LGUI  &lt 1 SPACE  &lt 2 SPACE    &lt 2 SPACE  &lt 1 SPACE  &kp SPACE
             >;
         };
 
@@ -78,10 +83,5 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-
-        Navigation {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
     };
 };
